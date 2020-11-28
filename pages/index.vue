@@ -70,7 +70,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   :root {
     --fontColor: #5e5e5e; /*文字颜色*/
     --titleColor: #3e3e3e; /*标题颜色*/
@@ -85,155 +85,140 @@
     left: 0;
     top: 0;
     bottom: 0;
-  }
-
-  #aside {
-    width: 50%;
-    height: 100%;
-    background: url("../assets/img/aside-bg.jpg") no-repeat center center;
-    background-size: 100% 100%;
-    transition: width 0.3s;
-  }
-
-  .home-view {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  .aboutMe {
-    width: 260px;
-    /*border: 1px solid red;*/
-    height: 300px;
-  }
-
-  .about-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  .about-nav a {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  .about-nav a .lt2 {
-    display: none;
-  }
-  .about-nav a:hover {
-    background: #3fb76c;
-    color: #fff;
-    border-color: #3fb76c;
-  }
-  .about-nav a:hover .lt2 {
-    display: inline;
-  }
-  .about-nav a:hover .lt1 {
-    display: none;
-  }
-  .aside-box {
-    /*width: 100%;*/
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.7) url("../assets/img/aside-bg.jpg")
-      no-repeat center center;
-    background-size: auto 100%;
-  }
-
-  .marsk {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-  }
-
-  .aside-content {
-    width: 400px;
-    height: 400px;
-    /*border: 1px solid red;*/
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .aside-content img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transition: transform 0.5s;
-    cursor: pointer;
-  }
-
-  .aside-content img:hover {
-    transform: rotate(360deg);
-    box-shadow: 0 0 30px rgba(0, 255, 249, 0.57);
-  }
-
-  .aside-content h1 {
-    color: var(--titleColor);
-    font-size: 22px;
-    padding-top: 16px;
-    padding-bottom: 30px;
-  }
-
-  .aside-content h1 a {
-    color: var(--titleColor);
-    font-size: 22px;
-    text-decoration: none;
-  }
-
-  .aside-content h1:after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 200px;
-    margin: 0 auto;
-    background: var(--lineColor);
-    margin-top: 15px;
-  }
-
-  .aside-content p {
-    font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: var(--fontColor);
-  }
-
-  .aside-icon {
-    clear: both;
-    display: flex;
-    justify-content: center;
-  }
-
-  .aside-icon a {
-    width: 34px;
-    height: 34px;
-    background-color: #5e5e5e;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 2px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    line-height: 34px;
-  }
-
-  .aside-icon a:hover {
-    background-color: var(--lineColor);
+    #aside {
+      width: 50%;
+      height: 100%;
+      background: url("../assets/img/aside-bg.jpg") no-repeat center center;
+      background-size: 100% 100%;
+      transition: width 0.3s;
+      .aside-box {
+        /*width: 100%;*/
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7) url("../assets/img/aside-bg.jpg")
+          no-repeat center center;
+        background-size: auto 100%;
+        .marsk {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.5);
+        }
+        .aside-content {
+          width: 400px;
+          height: 400px;
+          /*border: 1px solid red;*/
+          text-align: center;
+          position: relative;
+          z-index: 2;
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.5s;
+            cursor: pointer;
+            &:hover {
+              transform: rotate(360deg);
+              box-shadow: 0 0 30px rgba(0, 255, 249, 0.57);
+            }
+          }
+          p {
+            font-size: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--fontColor);
+          }
+          .aside-icon {
+            clear: both;
+            display: flex;
+            justify-content: center;
+            a {
+              width: 34px;
+              height: 34px;
+              background-color: #5e5e5e;
+              margin: 0 10px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+              border-radius: 2px;
+              color: #fff;
+              text-decoration: none;
+              text-align: center;
+              line-height: 34px;
+              &:hover {
+                background-color: var(--lineColor);
+              }
+            }
+          }
+          h1 {
+            color: var(--titleColor);
+            font-size: 22px;
+            padding-top: 16px;
+            padding-bottom: 30px;
+            &:after {
+              content: "";
+              display: block;
+              height: 1px;
+              width: 200px;
+              margin: 0 auto;
+              background: var(--lineColor);
+              margin-top: 15px;
+            }
+            a {
+              color: var(--titleColor);
+              font-size: 22px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .home-view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .aboutMe {
+        width: 260px;
+        /*border: 1px solid red;*/
+        height: 300px;
+        .about-nav {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          a {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s;
+            .lt2 {
+              display: none;
+            }
+            &:hover {
+              background: #3fb76c;
+              color: #fff;
+              border-color: #3fb76c;
+              .lt2 {
+                display: inline;
+              }
+              .lt1 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 </style>
